@@ -66,17 +66,17 @@ class App {
   }
 
   renderSelect(id, name) {
-    let option = this.$create('option', { class: 'station', value: id }, name);
+    let option = this.$create('option', { class: 'station text-white', value: id }, name);
     this.select[0].appendChild(option);
-    option = this.$create('option', { class: 'station', value: id }, name);
+    option = this.$create('option', { class: 'station text-white', value: id }, name);
     this.select[1].appendChild(option);
   }
 
   renderTimeTable(no, beginTime, endTime) {
     let section = this.$create('section', { class: 'd-flex justify-content-around my-1 bg-secondary' });
-    let p1 = this.$create('p', { class: 'text-white' }, no);
-    let p2 = this.$create('p', { class: 'text-white' }, beginTime);
-    let p3 = this.$create('p', { class: 'text-white' }, endTime);
+    let p1 = this.$create('div', { class: 'text-white' }, no);
+    let p2 = this.$create('div', { class: 'text-white' }, beginTime);
+    let p3 = this.$create('div', { class: 'text-white' }, endTime);
     section.appendChild(p1);
     section.appendChild(p2);
     section.appendChild(p3);
