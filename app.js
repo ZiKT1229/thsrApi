@@ -73,7 +73,7 @@ class App {
   }
 
   renderTimeTable(no, beginTime, endTime) {
-    let section = this.$create('section', { class: 'd-flex justify-content-around my-1 bg-secondary' });
+    let section = this.$create('section', { class: 'time-row d-flex justify-content-around my-1 bg-secondary' });
     let p1 = this.$create('div', { class: 'text-white' }, no);
     let p2 = this.$create('div', { class: 'text-white' }, beginTime);
     let p3 = this.$create('div', { class: 'text-white' }, endTime);
