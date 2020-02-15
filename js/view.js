@@ -24,9 +24,9 @@ class View {
 
   renderTimeTable(no, beginTime, endTime) {
     let section = $create('section', { class: 'time-row d-flex justify-content-around my-1 bg-secondary' });
-    let p1 = $create('div', { class: 'text-white' }, no);
-    let p2 = $create('div', { class: 'text-white' }, beginTime);
-    let p3 = $create('div', { class: 'text-white' }, endTime);
+    let p1 = $create('div', { class: 'no text-white' }, no);
+    let p2 = $create('div', { class: 'begin-time text-white' }, beginTime);
+    let p3 = $create('div', { class: 'end-time text-white' }, endTime);
     section.appendChild(p1);
     section.appendChild(p2);
     section.appendChild(p3);
