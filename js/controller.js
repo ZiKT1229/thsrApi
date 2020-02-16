@@ -10,12 +10,14 @@ class Controller {
     this.view.renderDate();
     
     window.addEventListener('change', () => {
-      let begin = this.view.select[0].options[this.view.select[0].selectedIndex].value;
-      let end = this.view.select[1].options[this.view.select[1].selectedIndex].value;
+      let beginStation = this.view.select[0].options[this.view.select[0].selectedIndex].value;
+      let endStaion = this.view.select[1].options[this.view.select[1].selectedIndex].value;
       let date = this.view.date.value;
+      let beginTime = this.view.filter[0].options[this.view.filter[0].selectedIndex].value;
+      let endTime = this.view.filter[1].options[this.view.filter[1].selectedIndex].value;
 
       this.view.clearTimeTable();
-      this.model.getTime(this.view.renderTimeTable.bind(this.view), begin, end, date);
+      this.model.getTime(this.view.renderTimeTable.bind(this.view), beginStation, endStaion, date, beginTime, endTime);
     });
   }
 }

@@ -24,7 +24,7 @@ class Model {
     }
   }
 
-  async getTime(renderMethod, oriId, desId, date) {
+  async getTime(renderMethod, oriId, desId, date, beginTime, endTime) {
     const endpoint = `${this.url}/DailyTimetable/OD/${oriId}/to/${desId}/${date}?$orderby=OriginStopTime%2FDepartureTime&$format=JSON`;
 
     try {
@@ -36,7 +36,7 @@ class Model {
           let { DepartureTime } = e.OriginStopTime;
           let { ArrivalTime } = e.DestinationStopTime;
 
-          renderMethod(TrainNo, DepartureTime, ArrivalTime);
+          if (DepartureTime >= beginTime && ArrivalTime <= endTime) renderMethod(TrainNo, DepartureTime, ArrivalTime);
         });
       } else {
         throw new Error('Oh my god!');

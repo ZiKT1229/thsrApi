@@ -10,13 +10,31 @@
   <link rel="icon" href="./images/railway.png" type="image/png">
 </head>
 <body class="bg-dark">
-  <nav class="option-bar d-flex justify-content-center">
-    <form >
-      <select class="stations bg-secondary text-white h-100"></select>
+  <nav class="option-bar d-flex flex-column align-items-center">
+    <section class="station-select">
+      <select class="stations bg-secondary text-white"></select>
       <span class="text-white">&#10140;</span>
-      <select class="stations bg-secondary text-white h-100"></select>
-      <input type="date" id="date" required>
-    </form>
+      <select class="stations bg-secondary text-white"></select>
+    </section>
+    <input id="date" class="date-picker" type="date" required>
+    <section>
+      <label class="text-white">出發時間</label>
+      <select class="time-filter bg-secondary text-white">
+        <option value="05:00">05:00</option>
+        <option value="11:00">11:00</option>
+        <option value="17:00">17:00</option>
+        <option value="23:00">23:00</option>
+      </select>
+    </section>
+    <section>
+      <label class="text-white">到達時間</label>
+      <select class="time-filter bg-secondary text-white">
+        <option value="23:00">23:00</option>
+        <option value="17:00">17:00</option>
+        <option value="11:00">11:00</option>
+        <option value="05:00">05:00</option>
+      </select>
+    </section>
   </nav>
   <main class="content-wrap">
     <section class="info d-flex justify-content-around text-white">

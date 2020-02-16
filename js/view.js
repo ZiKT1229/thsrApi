@@ -2,6 +2,7 @@ class View {
   constructor() {
     this.select = document.querySelectorAll('.stations');
     this.date = document.getElementById('date');
+    this.filter = document.querySelectorAll('.time-filter');
     this.timeTable = document.querySelector('.time-table');
   }
 
@@ -23,7 +24,7 @@ class View {
   }
 
   renderTimeTable(no, beginTime, endTime) {
-    let section = $create('section', { class: 'time-row d-flex justify-content-around my-1 bg-secondary' });
+    let section = $create('section', { class: 'time-row d-flex justify-content-around my-2' });
     let p1 = $create('div', { class: 'no text-white' }, no);
     let p2 = $create('div', { class: 'begin-time text-white' }, beginTime);
     let p3 = $create('div', { class: 'end-time text-white' }, endTime);
